@@ -1,0 +1,9 @@
+Копируем в корень диска С папку которая лежит в архиве
+Устанавливаем cygwin скачать его можно по этому адресу http://d-h.st/qo7
+Запускаем cygwin и переходим в папку со скриптами командой cd /cygdrive/c/mtk-tools
+Ложим boot.img или recovery.img в папку mtk-tools
+Набираем команду для распаковки ./unpack-MTK.pl boot.img
+Получаем новые файлы в папке mtk-tools
+boot.img-kernel это ядро
+boot.img-ramdisk это рамдиск
+Собирается командой  ./repack-mtk.pl -boot ./boot.img-kernel.img ./boot.img-ramdisk ./newboot.img
